@@ -87,7 +87,8 @@ def main():
         # START TODO #################
         # create AdamW optimizer (optim.AdamW) given model.parameters() and args.learning_rate
         # optimizer = ...
-        raise NotImplementedError
+        optimizer = optim.AdamW(model.parameters(), args.learning_rate)
+        # raise NotImplementedError
         # END TODO ###################
     else:
         raise ValueError(f"Undefined optimizer: {args.optimizer}")
